@@ -10,3 +10,4 @@ dict.update({"Maths" : maths})
 
 print(dict)
 
+print(dict)
