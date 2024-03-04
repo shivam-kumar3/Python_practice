@@ -1,0 +1,1 @@
+we can write the things at the starting using r+ mode by overwriting the old file 
