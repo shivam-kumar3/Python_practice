@@ -89,3 +89,33 @@ for i in l:
         print(i)
 
 ''' 
+
+# Exercise 7: Return the count of a given substring from a string
+# Write a program to find how many times substring “Emma” appears in the given string.
+
+# str_x = "Emma is good developer. Emma is a writer"
+
+# print(f"Emma appeared {str_x.count("Emma")} times")
+
+
+# Exercise 8: Print the following pattern
+
+# 1 
+# 2 2 
+# 3 3 3 
+# 4 4 4 4 
+# 5 5 5 5 5
+
+# for i in range (0,6):
+#     for j in range (i):
+#         print(i, end = " ")
+#     print("\n")
+
+# Exercise 9: Check Palindrome Number
+
+
+a = int(input("Enter any number"))
+if a == a.reverse():
+    print("Yes. given number is palindrome number")
+else:
+    print("No. given number is not palindrome number")git 
