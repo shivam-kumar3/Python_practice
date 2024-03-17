@@ -114,8 +114,29 @@ for i in l:
 # Exercise 9: Check Palindrome Number
 
 
-a = int(input("Enter any number"))
-if a == a.reverse():
-    print("Yes. given number is palindrome number")
-else:
-    print("No. given number is not palindrome number")git 
+# a = int(input("Enter any number"))
+# if a == a.reverse():
+#     print("Yes. given number is palindrome number")
+# else:
+#     print("No. given number is not palindrome number")
+
+
+
+# filter odd EnvironmentErrordefine a function input list 
+# output = [[1,3,5,7],[2,4,6,8]]
+
+def filter_odd_even(list):
+    odd = []
+    even = []
+    for i in list:
+        if i % 2 == 0:
+            even.append(i)
+        else:
+            odd.append(i)
+    output = [odd,even]
+    return output 
+
+list = [1,2,3,4,5,6,7,8,9,10]
+
+print(filter_odd_even(list))
+
