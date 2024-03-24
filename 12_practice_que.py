@@ -220,11 +220,38 @@ close_order = [i for i in order_list if i[3] == "CLOSED"]
 print(close_order)
 
 # UNPACKING METHOD 
-orders = [[101, '2023-07-25 00:00:00.0', 11599, 'CLOSED']]
-
-order_id,order_date,cust_id,payment_status = orders
-
-print(order_id)
 
 
 
+#  slicing list
+order_list =[
+    [101,'2023-07-25 00:00:00.0',11599,"CLOSED"],
+    [102,'2023-07-25 00:00:00.0',256,"PENDING PAYMENt"],
+    [102,'2023-07-25 00:00:00.0',12111,"COMPLETE"]
+]
+
+customer = [1, "shivam, shahi", "xxxxxxxxx", "xxxxxxxxx","6303 headther plaza","patna","BR", 800023]
+
+customer.extend(order_list)
+
+print(customer)
+
+
+# - enumerate in python
+
+order=   [101,'2023-07-25 00:00:00.0',11599,"CLOSED"]
+
+for j,i in enumerate(order):
+    print(f'Index {j}, Element : {i}')
+
+
+#  count the number of occurences of each word
+    
+input_list = ["hello", "My","Name", "Name","is","shivam","Shahi", "shahi"]
+lower= [i.lower() for i in input_list]
+input_set = set(lower)
+result = []
+
+for i in input_set:
+    result.append((i,input_list.count(i)))
+print(result)
