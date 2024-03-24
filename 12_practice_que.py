@@ -187,3 +187,44 @@ print(nested_list)
 nested = [[i,i**2,i**3] for i in range(1,4)]
 print(nested)
 
+# required list = [1,1,1,2,4,8,3,9,27
+nested = [[1, 1, 1], [2, 4, 8], [3, 9, 27]]
+flat = []
+for i in nested:
+    for j in i:
+        flat.append(j)
+print(flat)
+
+# using list comprehension
+nested = [[1, 1, 1], [2, 4, 8], [3, 9, 27]]
+flat =  [j for i in nested for j in i]
+print(flat)
+
+# FILTER ONLY CLOSED ORNDER
+order_list =[
+    [101,'2023-07-25 00:00:00.0',11599,"CLOSED"],
+    [102,'2023-07-25 00:00:00.0',256,"PENDING PAYMENt"],
+    [102,'2023-07-25 00:00:00.0',12111,"COMPLETE"]
+]
+
+# print(type(order_list))
+closed_order = []
+for i in order_list:
+    if i[3] == "CLOSED":
+        closed_order.append(i)
+print(closed_order)
+
+# using list comprehension method
+print(" using list comprehension method")
+close_order = [i for i in order_list if i[3] == "CLOSED"]
+print(close_order)
+
+# UNPACKING METHOD 
+orders = [[101, '2023-07-25 00:00:00.0', 11599, 'CLOSED']]
+
+order_id,order_date,cust_id,payment_status = orders
+
+print(order_id)
+
+
+
