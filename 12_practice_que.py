@@ -125,18 +125,65 @@ for i in l:
 # filter odd EnvironmentErrordefine a function input list 
 # output = [[1,3,5,7],[2,4,6,8]]
 
-def filter_odd_even(list):
-    odd = []
-    even = []
-    for i in list:
-        if i % 2 == 0:
-            even.append(i)
-        else:
-            odd.append(i)
-    output = [odd,even]
-    return output 
+# def filter_odd_even(list):
+#     odd = []
+#     even = []
+#     for i in list:
+#         if i % 2 == 0:
+#             even.append(i)
+#         else:
+#             odd.append(i)
+#     output = [odd,even]
+#     return output 
 
-list = [1,2,3,4,5,6,7,8,9,10]
+# list = [1,2,3,4,5,6,7,8,9,10]
 
-print(filter_odd_even(list))
+# print(filter_odd_even(list))
+
+# create a new list after performing some transformation
+
+order_amt = [100,200,50,500,100,900,1200,70]
+gst_amt = []
+for i in order_amt:
+    gst_amt.append(i + i*.18)
+print(gst_amt)
+
+# list comprehension method
+order_amt = [100,200,50,500,100,900,1200,70]
+gst_amt = [i + i*.18 for i in order_amt]
+print(gst_amt)
+
+
+# with tuples using index
+amt = [(100,5),(200,18),(50,12),(500,18),(400,12),(900,5),(1200,18),(70,12)]
+
+order_gst = []
+for i in amt:
+    order_gst.append(i[0]+i[0]*i[1]/100)
+
+print(order_gst)
+
+# list comprehension method with tuples
+amt = [(100,5),(200,18),(50,12),(500,18),(400,12),(900,5),(1200,18),(70,12)]
+
+gst = [i[0]+i[0]*i[1]/100 for i in amt]
+print(gst)
+
+# required output = [(100,5,105)]
+amt = [(100,5),(200,18),(50,12),(500,18),(400,12),(900,5),(1200,18),(70,12)]
+
+gst = [(i[0], i[1] , i[0]+i[0]*i[1]/100) for i in amt]
+print(gst)
+
+# want to create a nested list
+
+# [[1,1,1,],[2,4,8],[3,9,12]]
+nested_list = []
+for i in range(1,4):
+    nested_list.append([i,i**2,i**3])
+print(nested_list)
+
+# using list comprehension
+nested = [[i,i**2,i**3] for i in range(1,4)]
+print(nested)
 
