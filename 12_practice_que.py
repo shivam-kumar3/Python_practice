@@ -255,3 +255,13 @@ result = []
 for i in input_set:
     result.append((i,input_list.count(i)))
 print(result)
+
+# find out the student with second lowest marks
+students = [['Harry', 37.21], ['Berry', 37.21], ['Tina', 37.2], ['Akriti', 41], ['Harsh', 39]]
+lower = []
+
+
+for i in students:
+    for j in i:
+        lower.append(i[0], i[1])
+print(lower)
