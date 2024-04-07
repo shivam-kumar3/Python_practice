@@ -82,24 +82,52 @@ YELLOW - RIPE
 BROWN - OVERRIPE
 
 '''
-color = int(input('''choose the color of your fruit 
-              1 - GREEN
-              2 - YELLOW
-              3 - OVERRIPE
-              '''))
+# color = int(input('''choose the color of your fruit 
+#               1 - GREEN
+#               2 - YELLOW
+#               3 - OVERRIPE
+#               '''))
 
-if color == 1:
-    print("Your fruit is unripe")
-elif color == 2:
-    print("Your fruit is ripe")
-elif color == 3:
-    print("Your fruit is overipe")
+# if color == 1:
+#     print("Your fruit is unripe")
+# elif color == 2:
+#     print("Your fruit is ripe")
+# elif color == 3:
+#     print("Your fruit is overipe")
 
 '''
 WEATHER ACTIVITY SUGGESTION
 PROBLEM:
-
+suggest an activity based on the weather 
+sunny - on for a walk 
+rainy - read a book
+snowy - build a snowman
 
 
 
 '''
+# climate = input("Hows the weather")
+
+# if climate.lower() == "sunny":
+#     print("Lets go for a walk")
+# elif climate.lower() == "rainy":
+#     print("Lets have chai and pakoda")
+# elif climate.lower() == "snowy":
+#     print("bahut thandi hai bhaiya")
+
+'''
+TRANSPORT MODE SELECTION
+CHOOSE A MODE OF TRANSPORATATION BASED ON THE DISTANCE
+<3KM - WALK
+3-15KM - BIKE
+>15 - CAR
+
+'''
+km = int(input("Enter the distance"))
+
+if km <= 3:
+    print("chal ke chale jao bhai")
+elif km <15:
+    print("Bike utha lo")
+else:
+    print("Gaddi nikalo")
