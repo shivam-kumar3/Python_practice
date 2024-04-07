@@ -164,3 +164,7 @@ for i in orders:
 for status, count in status_count.items():
     print(f"{status}: {count}")
 
+
+
+for i in status_count:
+    print(i)
