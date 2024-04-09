@@ -123,11 +123,46 @@ CHOOSE A MODE OF TRANSPORATATION BASED ON THE DISTANCE
 >15 - CAR
 
 '''
-km = int(input("Enter the distance"))
+# km = int(input("Enter the distance"))
 
-if km <= 3:
-    print("chal ke chale jao bhai")
-elif km <15:
-    print("Bike utha lo")
+# if km <= 3:
+#     print("chal ke chale jao bhai")
+# elif km <15:
+#     print("Bike utha lo")
+# else:
+#     print("Gaddi nikalo")
+
+
+''' 
+password strength checker
+<6 character = wwak
+6-10 characters = medium
+>10 characters = strong
+
+
+'''
+# pas = input("enter your password")
+
+# if len(pas) < 6:
+#     print("Weak password")
+# elif len(pas) <10:
+#     print("Medium password")
+# else:
+#     print("Strong password")
+
+
+'''
+LEAP YEAR CHECKER 
+PROBLEM:
+determine if a year is a leap year. (leap year are divisible by 4 but not by 100 unless also division by 400)
+
+
+'''
+
+year= int(input("Enter the year"))
+
+if year % 4 == 0 or year % 400 == 0:
+    print("The year is leap year")
+
 else:
-    print("Gaddi nikalo")
+    print("The year is not leap year")
