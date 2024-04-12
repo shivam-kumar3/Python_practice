@@ -62,7 +62,7 @@ convertor(100)
 # Recursion
 # WHEN A FUNCTION CALLS ITSELF REPEATEDLY
 
-# print n to 1 bakcward 
+# print n to 1 backward 
 
 
 def show(n):

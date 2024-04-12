@@ -159,10 +159,134 @@ determine if a year is a leap year. (leap year are divisible by 4 but not by 100
 
 '''
 
-year= int(input("Enter the year"))
+# year= int(input("Enter the year"))
 
-if year % 4 == 0 or year % 400 == 0:
-    print("The year is leap year")
+# if year % 4 == 0 or year % 400 == 0:
+#     print("The year is leap year")
 
-else:
-    print("The year is not leap year")
+# else:
+#     print("The year is not leap year")
+
+
+#FUNCTION
+'''
+1- BASIC FUNCTION SYNTAX
+    # WRITE A FUNCTION TO CALCULATE AND RETURN THE SQUARE OF A NUMBER
+'''
+def square(a):
+    return (f"the Sqaure of the given number is {a**2}")
+
+print(square(5))
+
+'''
+2- Function with multiple parameters
+    Create a function that takes two numbers as parameters and returns their sum
+
+'''
+def sum(num1,num2):
+    return num1 + num2
+
+print(sum(5465,1234))
+
+'''
+3- Polymorphism in functions
+write a function multiply that multiplies two number but can also accept and multiply strings
+
+'''
+
+def multiply(a,b):
+    return a*b
+
+print(multiply(2,3))
+print(multiply("a",3))
+print(multiply(2,"A"))
+
+'''
+4 - FUNCTION RETURNING MULTIPLE VALUES
+CREATE A FUNCTION THAT RETURN BOTH THE AREA AND CIRCUMFERENCE OF CIRCLE GIVEN ITS RADIUS 
+
+'''
+import math
+def circle_stats(radius):
+    area = round(math.pi * radius **2,2)
+    circum = round(2*math.pi*radius,2)
+
+    return (f"The Area is {area}, The Circumference is {circum}")
+
+print(circle_stats(5))
+
+'''
+5- default parameter values
+write a function that greets a user, if no name is provided, it should greet with default name
+
+'''
+
+def greet(a="Buddy"):
+    return(f"Hello welcome to the board {a}")
+
+print(greet())
+print(greet("Rohan"))
+
+
+'''
+6 - lambda function
+Create a lambda function to compute the cube of a number
+
+'''
+
+cube = lambda a : a**3
+
+print(cube(5))
+
+'''
+7 - function with *args
+write a function that takes variable number of arguments and returns their sum
+'''
+
+def multisum(*a):
+    sum = 0
+    for i in a:
+        sum = sum +i
+    return sum
+
+print(multisum(2,14,5,6,8,7,1))
+
+
+'''
+8 - FUNCTION WITH **KWARGS
+Create a function that accepts any number of keywords arguments and print them in the format of  key : value
+
+'''
+
+def key_value(**a):
+    for key, values in a.items():
+        print(key, values)
+
+print(key_value(marks = [15,12,54,87],name = ["shivam ", "shahi","Rohan","Ram"]))
+
+'''
+9 -Generate a funcion with yield 
+Write a generator function that yield even numbers up to a specified limit
+'''
+
+def all(a):
+    for i in range(1,a):
+        if i % 2 == 0:
+            yield i
+
+
+for num in all(50):
+    print(num)
+
+'''
+10- RECURSIVE FUNCTION
+CREATE A RECURSIVE NUMBER TO FIND FACTORIAL OF A NUMBER
+'''
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+print(factorial(5))
